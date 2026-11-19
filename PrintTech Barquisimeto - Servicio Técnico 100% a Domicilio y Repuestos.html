@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrintTech Barquisimeto | Servicio Técnico 100% a Domicilio y Repuestos para Impresoras y Fotocopiadoras</title>
+  <meta name="description" content="Servicio técnico especializado 100% a domicilio, reparación en sitio, mantenimiento y entrega de repuestos e insumos para impresoras y fotocopiadoras en Barquisimeto y Cabudare, Lara. Sin tienda física, vamos directo a tu oficina u hogar." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              navy: '#1E3A8A',
+              cyan: '#0284C7',
+              light: '#F8FAFC',
+              amber: '#F59E0B',
+              orange: '#EA580C'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-600 selection:text-white">
+
+  <!-- Top 100% Mobile Service Banner -->
+  <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+          <i class="fa-solid fa-van-shuttle mr-1.5"></i> Modalidad 100% a Domicilio
+        </span>
+        <span><strong>Sin tienda física ni taller al público:</strong> Vamos directo a tu oficina, comercio u hogar.</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300 font-medium">
+        <span><i class="fa-solid fa-truck-fast text-sky-400 mr-1"></i> Cobertura Total: Barquisimeto y Cabudare</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 rounded-xl bg-gradient-to-br from-slate-900 via-blue-900 to-sky-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-print text-lg"></i>
+            <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center text-[10px] shadow">
+              <i class="fa-solid fa-gear"></i>
+            </span>
+          </div>
+          <div>
+            <span class="block text-xl font-extrabold tracking-tight text-slate-900 leading-none">
+              Print<span class="text-sky-600">Tech</span>
+            </span>
+            <span class="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 mt-0.5">
+              Barquisimeto
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+          <a href="#servicios" class="hover:text-sky-600 transition-colors">Servicios Técnicos</a>
+          <a href="#catalogo" class="hover:text-sky-600 transition-colors">Catálogo de Repuestos</a>
+          <a href="#agendar" class="hover:text-sky-600 transition-colors">Agendar Visita</a>
+          <a href="#como-trabajamos" class="hover:text-sky-600 transition-colors">Modalidad a Domicilio</a>
+        </nav>
+
+        <!-- Actions: Quote Cart + Direct WhatsApp -->
+        <div class="flex items-center gap-3">
+          <button id="openCartBtn" type="button" class="relative p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" aria-label="Lista de Cotización">
+            <i class="fa-solid fa-clipboard-list text-lg"></i>
+            <span id="cartBadge" class="hidden absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-amber-500 text-slate-950 text-xs font-extrabold flex items-center justify-center shadow">0</span>
+          </button>
+
+          <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20necesito%20informaci%C3%B3n%20sobre%20servicio%20t%C3%A9cnico%20o%20repuestos." target="_blank" rel="noopener noreferrer"
+             class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold shadow-sm transition-all">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>0426-7834742</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" type="button" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100" aria-label="Abrir Menú">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+      <a href="#servicios" class="mobile-link block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-slate-100">Servicios Técnicos</a>
+      <a href="#catalogo" class="mobile-link block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-slate-100">Catálogo de Repuestos</a>
+      <a href="#agendar" class="mobile-link block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-slate-100">Agendar Visita a Domicilio</a>
+      <a href="#como-trabajamos" class="mobile-link block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-slate-100">Modalidad 100% a Domicilio</a>
+      <div class="pt-2">
+        <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20requiero%20asistencia%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer"
+           class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-600 text-white font-bold">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Contactar por WhatsApp (0426-7834742)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white py-16 sm:py-24">
+    <!-- Subtle Grid Background Pattern -->
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 28px 28px;"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs sm:text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            100% Servicio Técnico Móvil y Entrega a Domicilio — Sin tienda física
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12]">
+            Servicio Técnico 100% a Domicilio y Repuestos para <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Impresoras y Fotocopiadoras</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            No tenemos tienda física ni taller al público porque <strong>llevamos el servicio técnico especializado directamente a tu puerta</strong>. Evita trasladar equipos pesados o delicados: diagnosticamos, reparamos y entregamos repuestos e insumos en tu oficina u hogar en <strong>Barquisimeto y Cabudare</strong>.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#agendar" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-slate-950 font-extrabold text-base shadow-lg shadow-orange-600/25 transition-all">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <span>Solicitar Técnico a Domicilio</span>
+            </a>
+            <a href="#catalogo" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-base backdrop-blur-sm transition-all">
+              <i class="fa-solid fa-boxes-stacked text-sky-400"></i>
+              <span>Ver Catálogo de Repuestos</span>
+            </a>
+          </div>
+
+          <!-- Trust Metrics -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80">
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-white">100%</p>
+              <p class="text-xs sm:text-sm text-slate-400">Atención en Sitio</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-sky-400">+8 Marcas</p>
+              <p class="text-xs sm:text-sm text-slate-400">Láser, Tinta y Térmicas</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold text-amber-400">Garantía</p>
+              <p class="text-xs sm:text-sm text-slate-400">Por escrito en reparaciones</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Diagnostic Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-800">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center">
+                  <i class="fa-solid fa-microchip text-xl"></i>
+                </div>
+                <div>
+                  <h2 class="font-bold text-white text-base">Diagnóstico Rápido</h2>
+                  <p class="text-xs text-slate-400">Equipos Multifuncionales y Oficina</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-bold">
+                Disponible Hoy
+              </span>
+            </div>
+
+            <ul class="space-y-3.5 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                <span><strong>Impresoras Láser y Multifuncionales:</strong> Atascos de papel, manchas en hoja, error de fusor o escáner.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                <span><strong>Fotocopiadoras de Alto Volumen:</strong> Reconstrucción de unidad de imagen, revelado y rodillos de arrastre.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                <span><strong>Inyección de Tinta / Sistema Continuo:</strong> Purga de cabezales, reseteo de almohadillas y cambio de mangueras.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                <span><strong>Impresoras Térmicas y Fiscales:</strong> Limpieza de cabezal térmico, sensores y engranajes de corte.</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 p-4 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-between gap-3">
+              <div>
+                <p class="text-xs text-slate-400">¿Emergencia en tu oficina o negocio?</p>
+                <p class="text-sm font-bold text-white">Coordinamos tu visita técnica por WhatsApp</p>
+              </div>
+              <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20tengo%20una%20emergencia%20con%20un%20equipo%20de%20impresi%C3%B3n%20y%20requiero%20visita%20a%20domicilio." target="_blank" rel="noopener noreferrer"
+                 class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold whitespace-nowrap transition-colors">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Chat Directo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Brands Strip -->
+  <section class="bg-white border-b border-slate-200 py-7">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">
+        Especialistas multimarca en equipos de impresión y copiado
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-center">
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">HP</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">CANON</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">EPSON</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">RICOH</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">KYOCERA</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">BROTHER</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">XEROX</div>
+        <div class="py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200/80 font-extrabold text-slate-700 tracking-wide text-sm">KONICA MINOLTA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Services Section -->
+  <section id="servicios" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-xs font-bold uppercase tracking-widest text-sky-600">Soluciones Integrales</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+        Servicios Técnicos Especializados a Domicilio
+      </h2>
+      <p class="text-slate-600 mt-3 text-base sm:text-lg">
+        Llevamos herramientas de precisión y repuestos directamente a tu oficina, comercio o residencia en toda el área metropolitana de Barquisimeto.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Service 1 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-house-laptop"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Reparación a Domicilio</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Solución inmediata en tu local u hogar para atascos recurrentes de papel, fallas de encendido, códigos de error en pantalla, ruidos mecánicos y baja calidad de impresión.
+          </p>
+          <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+            <li><i class="fa-solid fa-check text-sky-600 mr-1.5"></i> Diagnóstico en sitio sin desmontajes innecesarios</li>
+            <li><i class="fa-solid fa-check text-sky-600 mr-1.5"></i> Reparación de tarjetas lógicas y fuentes</li>
+            <li><i class="fa-solid fa-check text-sky-600 mr-1.5"></i> Solución de errores de escáner y red</li>
+          </ul>
+        </div>
+        <a href="#agendar" onclick="prefillService('Reparación a Domicilio')" class="inline-flex items-center text-sm font-bold text-sky-600 hover:text-sky-700">
+          Solicitar reparación <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Mantenimiento Preventivo</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Evita paradas costosas. Realizamos limpieza profunda con aspirado de tóner residual, lubricación de ejes, limpieza de óptica láser y calibración de sensores.
+          </p>
+          <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+            <li><i class="fa-solid fa-check text-blue-700 mr-1.5"></i> Aspirado interno y limpieza de óptica</li>
+            <li><i class="fa-solid fa-check text-blue-700 mr-1.5"></i> Lubricación con grasa térmica especializada</li>
+            <li><i class="fa-solid fa-check text-blue-700 mr-1.5"></i> Reseteo de contadores y almohadillas</li>
+          </ul>
+        </div>
+        <a href="#agendar" onclick="prefillService('Mantenimiento Preventivo')" class="inline-flex items-center text-sm font-bold text-blue-700 hover:text-blue-800">
+          Agendar mantenimiento <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Reconstrucción de Unidades</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Ahorra hasta un 60% frente a comprar unidades nuevas. Reconstruimos unidades de imagen (drum), unidades fusoras, cajas de revelado y sistemas de alimentación.
+          </p>
+          <ul class="space-y-2 text-xs font-medium text-slate-700 mb-6">
+            <li><i class="fa-solid fa-check text-amber-600 mr-1.5"></i> Cambio de cilindro OPC, cuchilla y PCR</li>
+            <li><i class="fa-solid fa-check text-amber-600 mr-1.5"></i> Cambio de filmina/rodillo de calor y presión</li>
+            <li><i class="fa-solid fa-check text-amber-600 mr-1.5"></i> Sustitución de gomas Pick-up y separación</li>
+          </ul>
+        </div>
+        <a href="#agendar" onclick="prefillService('Reconstrucción de Unidades')" class="inline-flex items-center text-sm font-bold text-amber-600 hover:text-amber-700">
+          Cotizar reconstrucción <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-building-shield"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Soporte para Empresas</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Planes de mantenimiento mensual y atención prioritaria para oficinas, clínicas, colegios, notarías, farmacias y comercios en Barquisimeto.
+          </p>
+          <ul class="space-y-2 text-xs font-medium text-slate-300 mb-6">
+            <li><i class="fa-solid fa-check text-sky-400 mr-1.5"></i> Visitas programadas mensuales</li>
+            <li><i class="fa-solid fa-check text-sky-400 mr-1.5"></i> Descuentos fijos en tóner y repuestos</li>
+            <li><i class="fa-solid fa-check text-sky-400 mr-1.5"></i> Respuesta prioritaria ante fallas críticas</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20deseo%20informaci%C3%B3n%20sobre%20planes%20de%20mantenimiento%20para%20empresas." target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-sm font-bold transition-colors">
+          Solicitar Plan Corporativo
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Spare Parts & Supplies Catalog -->
+  <section id="catalogo" class="bg-white border-y border-slate-200 py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600">Despacho a Domicilio en Barquisimeto</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+            Catálogo de Repuestos e Insumos
+          </h2>
+          <p class="text-slate-600 mt-2 max-w-2xl">
+            Filtra por categoría o busca por modelo de impresora/fotocopiadora. Agrega los repuestos a tu lista para enviar la cotización directa por WhatsApp.
+          </p>
+        </div>
+
+        <!-- Search Input -->
+        <div class="w-full lg:w-80">
+          <label for="catalogSearch" class="sr-only">Buscar repuesto o modelo</label>
+          <div class="relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input id="catalogSearch" type="text" placeholder="Ej: HP 85A, Fusor Ricoh, Epson L3110..."
+                   class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div id="categoryFilters" class="flex flex-wrap gap-2 mb-8">
+        <button data-category="Todos" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-900 text-white transition-all">
+          Todos
+        </button>
+        <button data-category="Tóner y Tintas" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Tóner y Tintas
+        </button>
+        <button data-category="Fusores y Rodillos" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Fusores y Rodillos
+        </button>
+        <button data-category="Cilindros / Drum" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Cilindros / Drum
+        </button>
+        <button data-category="Engranajes y Sensores" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Engranajes y Sensores
+        </button>
+        <button data-category="Kits de Mantenimiento" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Kits de Mantenimiento
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Populated dynamically by JavaScript -->
+      </div>
+
+        <!-- Empty State -->
+      <div id="emptyCatalogState" class="hidden text-center py-14 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+        <i class="fa-solid fa-box-open text-4xl text-slate-400 mb-3"></i>
+        <h3 class="text-lg font-bold text-slate-800">No encontramos ese repuesto en el listado rápido</h3>
+        <p class="text-sm text-slate-600 max-w-md mx-auto mt-1 mb-5">
+          Operamos con despacho directo a domicilio y amplia disponibilidad bajo pedido. Consúltanos con el modelo exacto de tu equipo y te lo llevamos a tu dirección.
+        </p>
+        <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20estoy%20buscando%20un%20repuesto%20espec%C3%ADfico%20con%20entrega%20a%20domicilio:" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold">
+          <i class="fa-brands fa-whatsapp"></i> Consultar Disponibilidad por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Home Technical Service Booking Form Section -->
+  <section id="agendar" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Left Info Column -->
+      <div class="lg:col-span-5 space-y-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-600">Agenda en 1 Minuto</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Solicita tu Servicio Técnico a Domicilio
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          Completa los datos de tu impresora o fotocopiadora y la zona de Barquisimeto donde te encuentras. Al enviar, generaremos tu orden lista para coordinar la visita inmediata por WhatsApp.
+        </p>
+
+        <div class="space-y-4 pt-2">
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 font-bold">1</div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Describe tu equipo y falla</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Así nuestro técnico lleva las herramientas y repuestos compatibles desde la primera visita.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 font-bold">2</div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Confirmación rápida por WhatsApp</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Validamos disponibilidad horaria en tu sector (Este, Oeste, Centro, Norte o Cabudare).</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 font-bold">3</div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Reparación con garantía</h4>
+              <p class="text-xs text-slate-600 mt-0.5">Presupuesto transparente antes de instalar cualquier repuesto y pruebas de impresión frente a ti.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Booking Form -->
+      <div class="lg:col-span-7">
+        <form id="bookingForm" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-lg space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <h3 class="text-lg font-extrabold text-slate-900">Orden de Visita Técnica</h3>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-sky-50 text-sky-700">Respuesta Inmediata</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="clientName" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Nombre o Empresa *</label>
+              <input id="clientName" type="text" required placeholder="Ej: Carlos Pérez / Inversiones Lara"
+                     class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" />
+            </div>
+            <div>
+              <label for="clientPhone" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Teléfono de Contacto *</label>
+              <input id="clientPhone" type="tel" required placeholder="Ej: 0414-5551234"
+                     class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="equipmentType" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Tipo de Equipo *</label>
+              <select id="equipmentType" required
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <option value="Impresora Láser">Impresora Láser (Monocromática / Color)</option>
+                <option value="Fotocopiadora Multifuncional">Fotocopiadora Multifuncional</option>
+                <option value="Inyección de Tinta / Sistema Continuo">Inyección de Tinta / Sistema Continuo</option>
+                <option value="Impresora Térmica / Fiscal">Impresora Térmica / Fiscal / Punto de Venta</option>
+              </select>
+            </div>
+            <div>
+              <label for="equipmentBrandModel" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Marca y Modelo *</label>
+              <input id="equipmentBrandModel" type="text" required placeholder="Ej: Ricoh MP 301 / Epson L3250 / HP M404"
+                     class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="zoneSelect" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Zona en Barquisimeto / Cabudare *</label>
+              <select id="zoneSelect" required
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <option value="Centro (Av. Venezuela, Carrera 19-21, Av. Vargas)">Centro (Av. Venezuela, Carrera 19-21, Av. Vargas)</option>
+                <option value="Este (Av. Lara, Nueva Segovia, Santa Elena, El Pedregal)">Este (Av. Lara, Nueva Segovia, Santa Elena)</option>
+                <option value="Oeste (Av. Florencio Jiménez, El Obelisco, Zona Industrial)">Oeste (Av. Florencio Jiménez, Zona Industrial)</option>
+                <option value="Norte (Av. Libertador, El Ujano, Patarata, Bararida)">Norte (Av. Libertador, Patarata, Bararida)</option>
+                <option value="Cabudare / La Mora / Tarabana">Cabudare / La Mora / Tarabana</option>
+              </select>
+            </div>
+            <div>
+              <label for="preferredTime" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Turno Preferido *</label>
+              <select id="preferredTime" required
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <option value="Lo antes posible (Urgente hoy)">Lo antes posible (Urgente hoy)</option>
+                <option value="Mañana (8:30 AM - 12:00 PM)">Turno Mañana (8:30 AM - 12:00 PM)</option>
+                <option value="Tarde (1:30 PM - 5:30 PM)">Turno Tarde (1:30 PM - 5:30 PM)</option>
+                <option value="Sábado (Previo acuerdo)">Sábado (Previo acuerdo)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="issueDescription" class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Descripción de la Falla o Servicio *</label>
+            <textarea id="issueDescription" rows="3" required placeholder="Ej: Atasque de papel en la bandeja 1, arroja código SC-542, o requiere mantenimiento preventivo general..."
+                      class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-slate-950 font-extrabold text-base shadow-md transition-all flex items-center justify-center gap-2.5">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Enviar Solicitud a WhatsApp (0426-7834742)</span>
+          </button>
+
+          <!-- Confirmation feedback box -->
+          <div id="bookingConfirmation" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm">
+            <p class="font-bold flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> ¡Orden de servicio generada!
+            </p>
+            <p class="mt-1 text-xs">Si no se abrió automáticamente WhatsApp, haz clic <a id="manualWaBookingLink" href="#" target="_blank" rel="noopener noreferrer" class="underline font-bold text-emerald-700">aquí para enviar tu solicitud</a>.</p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works / 100% Mobile On-Site Model & Coverage Section -->
+  <section id="como-trabajamos" class="bg-slate-900 text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Sin Tienda Física • 100% Móvil</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold">
+            Cómo Trabajamos: Servicio Técnico y Repuestos 100% a Domicilio
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            En <strong>PrintTech Barquisimeto</strong> operamos exclusivamente bajo modalidad móvil y despacho directo. <strong>No contamos con tienda física ni taller de recepción al público</strong>, lo que nos permite enfocarnos al 100% en acudir puntualmente a tu oficina, comercio o residencia sin hacerte perder tiempo ni arriesgar tus equipos en traslados.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white">Diagnóstico y Reparación en Sitio</h3>
+                <p class="text-sm text-slate-300">Acudimos directamente a tu oficina u hogar con herramientas especializadas y repuestos clave para reparar tu impresora o fotocopiadora frente a ti.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-truck-fast text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white">Entrega Express de Repuestos e Insumos</h3>
+                <p class="text-sm text-slate-300">Despacho directo a domicilio de cartuchos de tóner, tintas, cilindros, filminas de fusor y kits de mantenimiento en Barquisimeto y Cabudare.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-white">Atención Directa Previa Cita vía WhatsApp</h3>
+                <p class="text-sm text-slate-300">
+                  Escríbenos al <a href="tel:+584267834742" class="hover:text-sky-400 font-semibold text-white">0426-7834742</a> • Lunes a Viernes: 8:00 AM – 5:30 PM | Sábados: 8:30 AM – 2:00 PM.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coverage Card -->
+        <div class="lg:col-span-6">
+          <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 sm:p-8 space-y-5">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-lg text-white flex items-center gap-2">
+                <i class="fa-solid fa-map-location-dot text-sky-400"></i> Zonas de Cobertura a Domicilio
+              </h3>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Vamos hasta tu puerta</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-700/70">
+                <p class="font-bold text-sky-400">Zona Centro Barquisimeto</p>
+                <p class="text-xs text-slate-400 mt-1">Av. Venezuela, Av. Vargas, Carrera 19, 20, 21 y todo el casco comercial.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-700/70">
+                <p class="font-bold text-sky-400">Zona Este Barquisimeto</p>
+                <p class="text-xs text-slate-400 mt-1">Av. Lara, Nueva Segovia, Santa Elena, El Pedregal, Trinitarias.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-700/70">
+                <p class="font-bold text-sky-400">Zona Oeste & Industrial</p>
+                <p class="text-xs text-slate-400 mt-1">Av. Florencio Jiménez, El Obelisco, Zona Industrial I, II y III.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-700/70">
+                <p class="font-bold text-sky-400">Cabudare & Zona Norte</p>
+                <p class="text-xs text-slate-400 mt-1">Av. Libertador, Patarata, El Ujano, Intercomunal y Cabudare Centro.</p>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/25 text-xs text-amber-200 flex items-center gap-3">
+              <i class="fa-solid fa-circle-info text-amber-400 text-base shrink-0"></i>
+              <span>Recuerda: No recibimos equipos en local físico. Todo diagnóstico, reparación y entrega de repuestos se realiza directamente en tu domicilio u oficina.</span>
+            </div>
+
+            <div class="pt-1 flex flex-col sm:flex-row gap-3">
+              <a href="#agendar"
+                 class="flex-1 py-3 px-4 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-bold text-sm text-center transition-colors">
+                <i class="fa-solid fa-calendar-check mr-1.5 text-sky-600"></i> Agendar Visita en Sitio
+              </a>
+              <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20quiero%20coordinar%20una%20visita%20a%20domicilio%20o%20entrega%20de%20repuestos%20en%20mi%20sector." target="_blank" rel="noopener noreferrer"
+                 class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm text-center transition-colors">
+                <i class="fa-brands fa-whatsapp mr-1.5"></i> Coordinar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-900 py-8 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+      <div class="flex items-center gap-2 text-white font-bold">
+        <i class="fa-solid fa-print text-sky-400"></i>
+        <span>PrintTech Barquisimeto</span>
+      </div>
+      <p class="text-center">
+        Servicio Técnico y Repuestos 100% a Domicilio (Sin tienda física) • Barquisimeto y Cabudare, Lara • WhatsApp: 0426-7834742
+      </p>
+      <p>&copy; <span id="currentYear"></span> Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/584267834742?text=Hola%20PrintTech%20Barquisimeto,%20necesito%20ayuda%20con%20una%20impresora%20o%20repuesto." target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp"
+     class="fixed bottom-5 right-5 z-30 flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3.5 rounded-full shadow-xl shadow-emerald-950/30 transition-transform hover:scale-105">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="hidden sm:inline font-bold text-sm">WhatsApp Técnico</span>
+  </a>
+
+  <!-- Quote Cart Drawer / Modal -->
+  <div id="cartDrawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div id="cartOverlay" class="absolute inset-0 bg-slate-950/60 backdrop-blur-xs"></div>
+    <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
+        
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-900 text-white">
+          <div class="flex items-center gap-2.5">
+            <i class="fa-solid fa-clipboard-check text-amber-400 text-lg"></i>
+            <h3 class="font-extrabold text-base">Lista de Cotización / Pedido</h3>
+          </div>
+          <button id="closeCartBtn" type="button" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Drawer Items List -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-5 space-y-3">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-5 border-t border-slate-200 bg-slate-50 space-y-3">
+          <div class="flex items-center justify-between text-sm">
+            <span class="font-semibold text-slate-600">Total Referencial Estimado:</span>
+            <span id="cartTotal" class="text-xl font-extrabold text-slate-900">$0.00</span>
+          </div>
+          <p class="text-[11px] text-slate-500">
+            * Precios referenciales sujetos a confirmación de stock y compatibilidad exacta por WhatsApp. Despacho disponible en Barquisimeto.
+          </p>
+          <button id="sendCartWhatsAppBtn" type="button"
+                  class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-sm transition-all">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Enviar Pedido a WhatsApp (0426-7834742)</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs sm:text-sm font-semibold shadow-lg items-center gap-2">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toastMessage">Producto agregado a tu cotización</span>
+  </div>
+
+  <script>
+    // Spare parts and supplies catalog database
+    const catalogProducts = [
+      {
+        id: 'toner-hp-85a',
+        name: 'Cartucho Tóner Compatible HP 85A / 35A / 36A',
+        category: 'Tóner y Tintas',
+        brands: 'HP LaserJet P1102 / M1132 / M1212',
+        price: 14.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-fill-drip'
+      },
+      {
+        id: 'tinta-epson-544',
+        name: 'Kit 4 Botellas Tinta Original/Certificada T544',
+        category: 'Tóner y Tintas',
+        brands: 'Epson EcoTank L3110 / L3150 / L3210 / L3250',
+        price: 18.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-droplet'
+      },
+      {
+        id: 'toner-ricoh-mp301',
+        name: 'Tóner Alta Capacidad Ricoh MP 301SPF',
+        category: 'Tóner y Tintas',
+        brands: 'Ricoh Aficio MP 301 / MP 301SPF',
+        price: 22.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-fill-drip'
+      },
+      {
+        id: 'filmina-fusor-hp',
+        name: 'Filmina de Fusor + Grasa Térmica + Rodillo Presión',
+        category: 'Fusores y Rodillos',
+        brands: 'HP M402 / M404 / M426 / Canon',
+        price: 28.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-fire-flame-curved'
+      },
+      {
+        id: 'rodillos-pickup-epson',
+        name: 'Set Gomas de Arrastre (Pick-up Roller) Superior/Inferior',
+        category: 'Fusores y Rodillos',
+        brands: 'Epson Serie L210 / L355 / L3110 / L3250',
+        price: 12.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-circle-dot'
+      },
+      {
+        id: 'cilindro-opc-brother',
+        name: 'Unidad de Imagen / Cilindro Drum DR-630 / DR-2340',
+        category: 'Cilindros / Drum',
+        brands: 'Brother HL-L2320 / L2360 / DCP-L2540',
+        price: 24.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-compact-disc'
+      },
+      {
+        id: 'cilindro-kyocera-dk1150',
+        name: 'Kit Reconstrucción Cilindro OPC + Cuchilla Kyocera',
+        category: 'Cilindros / Drum',
+        brands: 'Kyocera Ecosys P2040 / M2040 / M2640',
+        price: 32.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-compact-disc'
+      },
+      {
+        id: 'engranajes-fusor-ricoh',
+        name: 'Kit Engranajes Unidad Fusora y Revelado',
+        category: 'Engranajes y Sensores',
+        brands: 'Ricoh MP 171 / MP 201 / MP 301 / MP 2550',
+        price: 16.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-gears'
+      },
+      {
+        id: 'sensor-papel-encoder',
+        name: 'Cinta Encoder + Sensor Óptico de Paso de Papel',
+        category: 'Engranajes y Sensores',
+        brands: 'Epson / Canon Pixma Serie G (G2100 / G3110)',
+        price: 15.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-microchip'
+      },
+      {
+        id: 'kit-almohadillas-epson',
+        name: 'Caja de Mantenimiento / Almohadillas + Reseteo',
+        category: 'Kits de Mantenimiento',
+        brands: 'Epson L3110 / L3250 / L4150 / L5190',
+        price: 15.00,
+        stock: 'Instalación a domicilio',
+        icon: 'fa-screwdriver-wrench'
+      },
+      {
+        id: 'kit-mant-kyocera',
+        name: 'Kit Mantenimiento Preventivo (Rodillos + Separador)',
+        category: 'Kits de Mantenimiento',
+        brands: 'Kyocera / Xerox WorkCentre / Samsung',
+        price: 35.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-toolbox'
+      },
+      {
+        id: 'cabezal-termico-80mm',
+        name: 'Rodillo y Sensor para Impresora Térmica 80mm / Fiscal',
+        category: 'Engranajes y Sensores',
+        brands: 'Bixolon / Epson TM-T20 / Bematech / HKA',
+        price: 20.00,
+        stock: 'Disponible hoy',
+        icon: 'fa-receipt'
+      }
+    ];
+
+    // State
+    let selectedCategory = 'Todos';
+    let searchQuery = '';
+    let quoteCart = [];
+
+    // DOM Elements
+    const productsGrid = document.getElementById('productsGrid');
+    const emptyCatalogState = document.getElementById('emptyCatalogState');
+    const catalogSearch = document.getElementById('catalogSearch');
+    const categoryButtons = document.querySelectorAll('.filter-btn');
+    const cartBadge = document.getElementById('cartBadge');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const sendCartWhatsAppBtn = document.getElementById('sendCartWhatsAppBtn');
+
+    // Render Catalog Products
+    function renderCatalog() {
+      const filtered = catalogProducts.filter(product => {
+        const matchesCategory = selectedCategory === 'Todos' || product.category === selectedCategory;
+        const q = searchQuery.toLowerCase().trim();
+        const matchesSearch = !q || 
+          product.name.toLowerCase().includes(q) || 
+          product.brands.toLowerCase().includes(q) || 
+          product.category.toLowerCase().includes(q);
+        return matchesCategory && matchesSearch;
+      });
+
+      productsGrid.innerHTML = '';
+
+      if (filtered.length === 0) {
+        productsGrid.classList.add('hidden');
+        emptyCatalogState.classList.remove('hidden');
+        return;
+      }
+
+      productsGrid.classList.remove('hidden');
+      emptyCatalogState.classList.add('hidden');
+
+      filtered.forEach(item => {
+        const directWaText = encodeURIComponent(
+          `Hola PrintTech Barquisimeto, me interesa consultar/pedir este repuesto:\n• *${item.name}*\n• Compatibilidad: ${item.brands}\n• Precio ref.: $${item.price.toFixed(2)}`
+        );
+
+        const card = document.createElement('div');
+        card.className = 'bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all flex flex-col justify-between';
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-lg bg-sky-100 text-sky-800 text-[11px] font-bold">
+                ${item.category}
+              </span>
+              <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                <i class="fa-solid fa-check mr-1"></i>${item.stock}
+              </span>
+            </div>
+
+            <div class="w-11 h-11 rounded-xl bg-white border border-slate-200 text-slate-800 flex items-center justify-center text-lg mb-3 shadow-2xs">
+              <i class="fa-solid ${item.icon}"></i>
+            </div>
+
+            <h3 class="font-bold text-slate-900 text-base leading-snug mb-1.5">${item.name}</h3>
+            <p class="text-xs text-slate-600 mb-4">
+              <strong class="text-slate-700">Compatible:</strong> ${item.brands}
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-200/80 space-y-2.5">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs text-slate-500">Ref. unitario:</span>
+              <span class="text-xl font-extrabold text-slate-900">$${item.price.toFixed(2)}</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" onclick="addToQuoteCart('${item.id}')"
+                      class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-plus"></i> Cotizar
+              </button>
+              <a href="https://wa.me/584267834742?text=${directWaText}" target="_blank" rel="noopener noreferrer"
+                 class="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5">
+                <i class="fa-brands fa-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        `;
+        productsGrid.appendChild(card);
+      });
+    }
+
+    // Category Filter Listeners
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => {
+          b.classList.remove('bg-slate-900', 'text-white', 'active');
+          b.classList.add('bg-slate-100', 'text-slate-700');
+        });
+        btn.classList.remove('bg-slate-100', 'text-slate-700');
+        btn.classList.add('bg-slate-900', 'text-white', 'active');
+        selectedCategory = btn.dataset.category;
+        renderCatalog();
+      });
+    });
+
+    // Real-time Search Listener
+    catalogSearch.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderCatalog();
+    });
+
+    // Quote Cart Logic
+    function addToQuoteCart(productId) {
+      const product = catalogProducts.find(p => p.id === productId);
+      if (!product) return;
+
+      const existing = quoteCart.find(item => item.id === productId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        quoteCart.push({ ...product, qty: 1 });
+      }
+      updateCartUI();
+      showToast(`"${product.name}" agregado a tu lista`);
+    }
+
+    function updateCartQty(productId, delta) {
+      const index = quoteCart.findIndex(item => item.id === productId);
+      if (index === -1) return;
+
+      quoteCart[index].qty += delta;
+      if (quoteCart[index].qty <= 0) {
+        quoteCart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalItems = quoteCart.reduce((acc, item) => acc + item.qty, 0);
+      const totalAmount = quoteCart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+
+      if (totalItems > 0) {
+        cartBadge.textContent = totalItems;
+        cartBadge.classList.remove('hidden');
+      } else {
+        cartBadge.classList.add('hidden');
+      }
+
+      cartTotalEl.textContent = `$${totalAmount.toFixed(2)}`;
+      sendCartWhatsAppBtn.disabled = quoteCart.length === 0;
+
+      if (quoteCart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="text-center py-12 text-slate-500">
+            <i class="fa-solid fa-clipboard-list text-4xl text-slate-300 mb-3"></i>
+            <p class="font-bold text-slate-700">Tu lista de cotización está vacía</p>
+            <p class="text-xs mt-1">Agrega repuestos o insumos desde el catálogo para solicitar envío a domicilio.</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartItemsContainer.innerHTML = quoteCart.map(item => `
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+          <div class="min-w-0">
+            <p class="font-bold text-xs sm:text-sm text-slate-900 truncate">${item.name}</p>
+            <p class="text-[11px] text-slate-500 truncate">${item.brands}</p>
+            <p class="text-xs font-extrabold text-sky-700 mt-1">$${(item.price * item.qty).toFixed(2)} <span class="font-normal text-slate-400">($${item.price.toFixed(2)} c/u)</span></p>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" onclick="updateCartQty('${item.id}', -1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 text-slate-700 font-bold hover:bg-slate-100">-</button>
+            <span class="w-6 text-center text-xs font-extrabold">${item.qty}</span>
+            <button type="button" onclick="updateCartQty('${item.id}', 1)" class="w-7 h-7 rounded-lg bg-white border border-slate-300 text-slate-700 font-bold hover:bg-slate-100">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Send Quote Cart to WhatsApp
+    sendCartWhatsAppBtn.addEventListener('click', () => {
+      if (quoteCart.length === 0) return;
+
+      const lines = quoteCart.map(item => `• ${item.qty}x ${item.name} ($${(item.price * item.qty).toFixed(2)})`).join('\n');
+      const total = quoteCart.reduce((acc, item) => acc + (item.price * item.qty), 0).toFixed(2);
+
+      const message = `Hola *PrintTech Barquisimeto*, deseo cotizar y coordinar despacho a domicilio de los siguientes repuestos/insumos:\n\n${lines}\n\n*Total Referencial:* $${total}\n\n¿Me confirman disponibilidad y costo de envío en Barquisimeto?`;
+      const waUrl = `https://wa.me/584267834742?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    });
+
+    // Drawer Toggle
+    document.getElementById('openCartBtn').addEventListener('click', () => {
+      cartDrawer.classList.remove('hidden');
+    });
+    document.getElementById('closeCartBtn').addEventListener('click', () => {
+      cartDrawer.classList.add('hidden');
+    });
+    document.getElementById('cartOverlay').addEventListener('click', () => {
+      cartDrawer.classList.add('hidden');
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Prefill service in booking form
+    function prefillService(serviceName) {
+      const desc = document.getElementById('issueDescription');
+      if (!desc.value) {
+        desc.value = `Requiero servicio de: ${serviceName}. `;
+      }
+    }
+
+    // Booking Form Submission -> Generates WhatsApp Message
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const eqType = document.getElementById('equipmentType').value;
+      const brandModel = document.getElementById('equipmentBrandModel').value.trim();
+      const zone = document.getElementById('zoneSelect').value;
+      const time = document.getElementById('preferredTime').value;
+      const issue = document.getElementById('issueDescription').value.trim();
+
+      const waMessage = `*SOLICITUD DE SERVICIO TÉCNICO A DOMICILIO - PRINTTECH BQTO*\n\n` +
+        `👤 *Cliente/Empresa:* ${name}\n` +
+        `📞 *Teléfono:* ${phone}\n` +
+        `🖨️ *Equipo:* ${eqType}\n` +
+        `🏷️ *Marca/Modelo:* ${brandModel}\n` +
+        `📍 *Zona:* ${zone}\n` +
+        `🕒 *Turno Preferido:* ${time}\n` +
+        `🔧 *Falla / Requerimiento:* ${issue}`;
+
+      const waUrl = `https://wa.me/584267834742?text=${encodeURIComponent(waMessage)}`;
+
+      const confirmBox = document.getElementById('bookingConfirmation');
+      const manualLink = document.getElementById('manualWaBookingLink');
+      manualLink.href = waUrl;
+      confirmBox.classList.remove('hidden');
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    });
+
+    // Toast Helper
+    let toastTimeout;
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2800);
+    }
+
+    // Initialize Page
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    renderCatalog();
+    updateCartUI();
+  </script>
+</body>
+</html>
